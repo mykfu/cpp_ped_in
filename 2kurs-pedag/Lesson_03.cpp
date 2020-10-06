@@ -3,7 +3,7 @@
 #include<ctime>
 using namespace std;
 
-int main() {
+void lesson_03() {
 
 	const int rows = 6;
 	const int cols = 3;
