@@ -77,11 +77,8 @@ double integral(double a, double b, int n = 1000) {
 	return (b - a) / n * sum;
 }
 
-void lesson_03();
+void lesson_04() {
 
-int main() {
-
-	lesson_03();
 
 	const double pi = 3.14;
 
@@ -112,6 +109,5 @@ int main() {
 	out(integral(0, 1));
 	out(integral(0, 1, 10));
 
-	return 0;
 }
 
