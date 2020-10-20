@@ -20,7 +20,7 @@ void swap(int* a, int* b) {
 	b = &t;
 }
 
-int main() {
+void lesson_05() {
 	int x = 5;
 
 	cout << "x = " << x << endl;
