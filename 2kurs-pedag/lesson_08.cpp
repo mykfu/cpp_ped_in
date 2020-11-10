@@ -2,7 +2,7 @@
 using namespace std;
 
 
-int main() {
+void lesson_08() {
 	int staticArray[10];
 
 
