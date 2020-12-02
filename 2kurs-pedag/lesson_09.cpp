@@ -95,12 +95,12 @@ int compare(string left, string right) {
 
 	for (int i = 0; i < len; i++)
 	{
-		int c1 = ((int) left.at(i)) * 2;
-		int c2 = ((int) right.at(i)) * 2;
+		int c1 = ((unsigned char) left.at(i)) * 2;
+		int c2 = ((unsigned char) right.at(i)) * 2;
 
 
-		if (left.at(i) == 'ё') c1 = ((int)left.at(i)) * 2 - 1;
-		if (right.at(i) == 'ё') c2 = ((int)right.at(i)) * 2 - 1;
+		if (left.at(i) == 'ё') c1 = ((unsigned char)'е') * 2 + 1;
+		if (right.at(i) == 'ё') c2 = ((unsigned char)'е') * 2 + 1;
 
 		if (c1 != c2) {
 			return c1 - c2;
@@ -129,7 +129,7 @@ bool binary_search(string* sorted, int length, string findMe) {
 }
 
 
-int main() {
+int main2() {
 	setlocale(LC_ALL, "ru");
 
 	//srand(time(0));
@@ -165,16 +165,17 @@ int main() {
 	cout << "binary_search 69:\n\t";
 	cout << (binary_search(sorted, length, 69) ? "Found" : "Not found") << endl;
 
-	string* strs = new string[] {"ее", "ёж", "ель", "стол", "слон", "неуд"};
+	string* strs = new string[] {"ее", "ель", "ёж", "неуд", "слон", "стол"};
 
 	cout << "binary_search ёж:\n\t";
 	cout << (binary_search(strs, 6, "ёж") ? "Found" : "Not found") << endl;
 
+
+
 	cout << compare("ёлка", "ель") << endl;
 	cout << compare("стол", "блок") << endl;
+	cout << compare("сто", "стол") << endl;
 
 
-
-
-
+	return 0;
 }
